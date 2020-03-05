@@ -1,23 +1,23 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import Vue from "vue";
+import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/login',
-    component: () => import('@/views/login'),
+    path: "/login",
+    component: () => import("@/layout"),
     hidden: true
   },
   {
-    path: '/layout',
-    component: () => import('@/layout'),
+    path: "/layout",
+    component: () => import("@/layout"),
     hidden: true
   }
 ];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
   routes
 });
