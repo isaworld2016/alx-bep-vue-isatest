@@ -1,0 +1,14 @@
+POST http://localhost:9090/LoginAct.do HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+
+{
+  userid: "system",
+  passwd: "111111"
+}
+
+### 코드 조회 - com
+POST http://localhost:9090/api/com/getCodeList.do HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+accesstoken: eyJhbGciOiJIUzI1NiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAAAKtWyk0sVbJSCo4MVtJRSioBMg0MgayCIhirKD8nVckqWsnRxdfTTylWRyk3JzEvHSibnR_vHQRUkJkC5BRXFpek5gJ5qRUFSlaGphbGBiYGRoZmQOnEEqiAsZkZSCAvF6j-TfecN11L3rbOUXi1peH1sjVv5k1QqgUAPN6U0o0AAAA.xwxKtScD8MvNWPacrMfBqhJGkZGc_eBCpMvYkC7cuD0
+
+{}
