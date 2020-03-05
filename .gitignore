@@ -20,4 +20,4 @@ yarn-error.log*
 *.sln
 *.sw?
 
-ignoretest.js
+# ignoretest.js
