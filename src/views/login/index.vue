@@ -50,30 +50,30 @@ export default {
   },
   mounted() {},
   methods: {
-    // handleLogin() {
-    //   this.$http
-    //     .post(
-    //       '/LoginAct.do',
-    //       {
-    //         userid: this.loginForm.username,
-    //         passwd: this.loginForm.password
-    //       },
-    //       {
-    //         showLoading: true
-    //       }
-    //     )
-    //     .then(res => {
-    //       const { accesstoken } = res.headers;
-    //       /* 쿠키를 생성한다. */
-    //       this.$cookie.set('spaToken', accesstoken, { expires: '60s' });
-    //       if (res.data.resultData.initPassYn === 'Y') {
-    //         // 비밀번호 변경 Popup
-    //         this.isPasswdChange = true;
-    //       } else {
-    //         window.location.href = '/layout';
-    //       }
-    //     });
-    // },
+    handleLogin() {
+      this.$http
+        .post(
+          "/LoginAct.do",
+          {
+            userid: this.loginForm.username,
+            passwd: this.loginForm.password
+          },
+          {
+            showLoading: true
+          }
+        )
+        .then(res => {
+          const { accesstoken } = res.headers;
+          /* 쿠키를 생성한다. */
+          this.$cookie.set("spaToken", accesstoken, { expires: "60s" });
+          if (res.data.resultData.initPassYn === "Y") {
+            // 비밀번호 변경 Popup
+            this.isPasswdChange = true;
+          } else {
+            window.location.href = "/layout";
+          }
+        });
+    },
     showThisModal() {
       this.$modal.show("priv-poli-modal");
     }
